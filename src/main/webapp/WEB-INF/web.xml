@@ -1,0 +1,52 @@
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+          http://java.sun.com/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+    <display-name>Archetype Created Web Application</display-name>
+
+    <filter>
+        <filter-name>ResponseFilter</filter-name>
+        <filter-class>com.vladimir1506.rest.servlets.ResponseFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>ResponseFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <servlet>
+        <servlet-name>DeleteFileServlet</servlet-name>
+        <servlet-class>com.vladimir1506.rest.servlets.DeleteFileServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteFileServlet</servlet-name>
+        <url-pattern>/delete</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AddFileServlet</servlet-name>
+        <servlet-class>com.vladimir1506.rest.servlets.AddFileServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>GetAllFilesServlet</servlet-name>
+        <servlet-class>com.vladimir1506.rest.servlets.GetAllFilesServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>GetFileServlet</servlet-name>
+        <servlet-class>com.vladimir1506.rest.servlets.GetFileServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AddFileServlet</servlet-name>
+        <url-pattern>/add</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>GetAllFilesServlet</servlet-name>
+        <url-pattern>/files</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetFileServlet</servlet-name>
+        <url-pattern>/file</url-pattern>
+    </servlet-mapping>
+</web-app>

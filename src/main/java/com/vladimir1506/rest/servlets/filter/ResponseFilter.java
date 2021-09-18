@@ -1,6 +1,4 @@
-package com.vladimir1506.rest.servlets;
-
-import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
+package com.vladimir1506.rest.servlets.filter;
 
 import javax.servlet.*;
 import java.io.IOException;

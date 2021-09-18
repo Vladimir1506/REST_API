@@ -1,31 +1,27 @@
 package com.vladimir1506.rest.servlets;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.vladimir1506.rest.MyFile;
-import com.vladimir1506.rest.FileImpl;
+import com.vladimir1506.rest.controller.FileController;
+import com.vladimir1506.rest.model.MyFile;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.List;
 
 public class GetFileServlet extends HttpServlet {
-    private List<MyFile> files;
-    private FileImpl fileImpl;
+    private FileController fileController;
 
     @Override
-    public void init() throws ServletException {
-        fileImpl = new FileImpl();
-
+    public void init(){
+        fileController = new FileController();
     }
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         Long id = Long.parseLong(req.getParameter("id"));
-        MyFile file = fileImpl.getById(id);
-
+        MyFile file = fileController.getFileById(id);
         String fileJSON = new ObjectMapper().writeValueAsString(file);
         resp.getWriter().write(fileJSON);
     }

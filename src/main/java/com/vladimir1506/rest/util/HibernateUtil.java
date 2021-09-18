@@ -1,6 +1,6 @@
 package com.vladimir1506.rest.util;
 
-import com.vladimir1506.rest.MyFile;
+import com.vladimir1506.rest.model.MyFile;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;

@@ -1,7 +1,0 @@
-https://learn.javascript.ru/first-steps  
-https://ruseller.com/lessons.php?id=682
-http://www.quizful.net/post/jQuery_selectors
-https://habr.com/ru/post/305900/
-http://typescript-lang.ru/docs/
-https://learn.javascript.ru/regular-expressions
-https://github.com/devSchacht/clean-code-javascript

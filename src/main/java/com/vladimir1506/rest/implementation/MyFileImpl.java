@@ -1,12 +1,13 @@
-package com.vladimir1506.rest;
+package com.vladimir1506.rest.implementation;
 
+import com.vladimir1506.rest.model.MyFile;
 import com.vladimir1506.rest.util.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
 import java.util.List;
 
-public class FileImpl {
+public class MyFileImpl {
     public List<MyFile> getAll() {
         List<MyFile> files = null;
         Transaction transaction = null;

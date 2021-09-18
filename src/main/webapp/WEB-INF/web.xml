@@ -7,7 +7,7 @@
 
     <filter>
         <filter-name>ResponseFilter</filter-name>
-        <filter-class>com.vladimir1506.rest.servlets.ResponseFilter</filter-class>
+        <filter-class>com.vladimir1506.rest.servlets.filter.ResponseFilter</filter-class>
     </filter>
     <filter-mapping>
         <filter-name>ResponseFilter</filter-name>
@@ -21,6 +21,15 @@
     <servlet-mapping>
         <servlet-name>DeleteFileServlet</servlet-name>
         <url-pattern>/delete</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>FileServlet</servlet-name>
+        <servlet-class>com.vladimir1506.rest.servlets.FileServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FileServlet</servlet-name>
+        <url-pattern>/files</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -43,7 +52,7 @@
 
     <servlet-mapping>
         <servlet-name>GetAllFilesServlet</servlet-name>
-        <url-pattern>/files</url-pattern>
+        <url-pattern>/myfiles</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>GetFileServlet</servlet-name>

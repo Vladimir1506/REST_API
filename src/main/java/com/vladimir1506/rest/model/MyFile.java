@@ -1,4 +1,4 @@
-package com.vladimir1506.rest;
+package com.vladimir1506.rest.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
@@ -22,6 +22,9 @@ public class MyFile {
     private Date upload;
     @Column(name = "path")
     private String path;
+//    @ManyToOne()
+//    @JoinColumn(name = "user_id")
+//    private User user;
 
     public MyFile() {
     }

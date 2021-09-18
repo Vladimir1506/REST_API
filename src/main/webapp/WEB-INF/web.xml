@@ -15,15 +15,6 @@
     </filter-mapping>
 
     <servlet>
-        <servlet-name>DeleteFileServlet</servlet-name>
-        <servlet-class>com.vladimir1506.rest.servlets.DeleteFileServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>DeleteFileServlet</servlet-name>
-        <url-pattern>/delete</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
         <servlet-name>FileServlet</servlet-name>
         <servlet-class>com.vladimir1506.rest.servlets.FileServlet</servlet-class>
     </servlet>
@@ -32,30 +23,4 @@
         <url-pattern>/files</url-pattern>
     </servlet-mapping>
 
-    <servlet>
-        <servlet-name>AddFileServlet</servlet-name>
-        <servlet-class>com.vladimir1506.rest.servlets.AddFileServlet</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>GetAllFilesServlet</servlet-name>
-        <servlet-class>com.vladimir1506.rest.servlets.GetAllFilesServlet</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>GetFileServlet</servlet-name>
-        <servlet-class>com.vladimir1506.rest.servlets.GetFileServlet</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>AddFileServlet</servlet-name>
-        <url-pattern>/add</url-pattern>
-    </servlet-mapping>
-
-    <servlet-mapping>
-        <servlet-name>GetAllFilesServlet</servlet-name>
-        <url-pattern>/myfiles</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>GetFileServlet</servlet-name>
-        <url-pattern>/file</url-pattern>
-    </servlet-mapping>
 </web-app>

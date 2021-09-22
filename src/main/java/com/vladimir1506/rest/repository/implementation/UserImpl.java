@@ -1,64 +1,69 @@
-package com.vladimir1506.rest.implementation;
+package com.vladimir1506.rest.repository.implementation;
 
-import com.vladimir1506.rest.model.MyFile;
+import com.vladimir1506.rest.model.User;
+import com.vladimir1506.rest.repository.UserRepository;
 import com.vladimir1506.rest.util.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
 import java.util.List;
 
-public class MyFileImpl {
-    public List<MyFile> getAll() {
-        List<MyFile> files = null;
+public class UserImpl implements UserRepository {
+    @Override
+    public List<User> getAll() {
+        List<User> users = null;
         Transaction transaction = null;
         try (Session session = HibernateUtil.getSession()) {
             transaction = session.beginTransaction();
-            files = session.createQuery("from MyFile").list();
+            users = session.createQuery("from User").list();
             transaction.commit();
         } catch (Exception e) {
             if (transaction != null) {
                 transaction.rollback();
             }
         }
-        return files;
+        return users;
     }
 
-    public MyFile getById(Long id) {
+    @Override
+    public User getById(Long id) {
         Transaction transaction = null;
-        MyFile file = null;
+        User user = null;
         try (Session session = HibernateUtil.getSession()) {
             transaction = session.beginTransaction();
-            file = session.get(MyFile.class, id);
+            user = session.get(User.class, id);
             transaction.commit();
         } catch (Exception e) {
             if (transaction != null) {
                 transaction.rollback();
             }
         }
-        return file;
+        return user;
     }
 
-    public MyFile save(MyFile file) {
+    @Override
+    public User save(User user) {
         Transaction transaction = null;
         try (Session session = HibernateUtil.getSession()) {
             transaction = session.beginTransaction();
-            session.save(file);
+            session.save(user);
             transaction.commit();
         } catch (Exception e) {
             if (transaction != null) {
                 transaction.rollback();
             }
         }
-        return file;
+        return user;
     }
 
+    @Override
     public void delete(Long id) {
         Transaction transaction = null;
-        MyFile file;
+        User user;
         try (Session session = HibernateUtil.getSession()) {
             transaction = session.beginTransaction();
-            file = session.get(MyFile.class, id);
-            session.delete(file);
+            user = session.get(User.class, id);
+            session.delete(user);
             transaction.commit();
         } catch (Exception e) {
             if (transaction != null) {

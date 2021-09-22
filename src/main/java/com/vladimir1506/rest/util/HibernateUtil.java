@@ -1,6 +1,7 @@
 package com.vladimir1506.rest.util;
 
 import com.vladimir1506.rest.model.MyFile;
+import com.vladimir1506.rest.model.User;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -14,6 +15,7 @@ public class HibernateUtil {
         if (sessionFactory == null) {
             return new Configuration().configure("hibernate.cfg.xml")
                     .addAnnotatedClass(MyFile.class)
+                    .addAnnotatedClass(User.class)
                     .buildSessionFactory()
                     .openSession();
         }

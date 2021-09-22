@@ -22,5 +22,13 @@
         <servlet-name>FileServlet</servlet-name>
         <url-pattern>/files</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>UserServlet</servlet-name>
+        <servlet-class>com.vladimir1506.rest.servlets.UserServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserServlet</servlet-name>
+        <url-pattern>/users</url-pattern>
+    </servlet-mapping>
 
 </web-app>

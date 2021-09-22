@@ -1,6 +1,6 @@
 package com.vladimir1506.rest.controller;
 
-import com.vladimir1506.rest.implementation.MyFileImpl;
+import com.vladimir1506.rest.repository.implementation.MyFileImpl;
 import com.vladimir1506.rest.model.MyFile;
 
 import java.util.List;

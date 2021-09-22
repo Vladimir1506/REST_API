@@ -22,9 +22,9 @@ public class MyFile {
     private Date upload;
     @Column(name = "path")
     private String path;
-//    @ManyToOne()
-//    @JoinColumn(name = "user_id")
-//    private User user;
+    @ManyToOne()
+    @JoinColumn(name = "user_id", nullable=false)
+    private User user;
 
     public MyFile() {
     }
@@ -76,13 +76,22 @@ public class MyFile {
         this.path = path;
     }
 
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
     @Override
     public String toString() {
         return "id=" + id +
                 ", name=" + name +
                 ", size=" + size +
                 ", upload=" + upload +
-                ", path=" + path;
+                ", path=" + path +
+                ", userId=" + user.getId();
     }
 
 

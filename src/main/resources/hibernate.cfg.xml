@@ -7,7 +7,7 @@
             org.hibernate.dialect.MySQLDialect
         </property>
         <property name="hibernate.connection.driver_class">
-            com.mysql.jdbc.Driver
+            com.mysql.cj.jdbc.Driver
         </property>
 
         <property name="hibernate.connection.url">
@@ -20,6 +20,5 @@
             rootroot
         </property>
         <property name="hibernate.show_sql">true</property>
-        <property name="hibernate.ddl-auto">create</property>
     </session-factory>
 </hibernate-configuration>

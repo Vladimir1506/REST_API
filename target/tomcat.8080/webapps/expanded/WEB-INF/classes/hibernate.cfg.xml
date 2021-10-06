@@ -11,7 +11,7 @@
         </property>
 
         <property name="hibernate.connection.url">
-            jdbc:mysql://eu-cdbr-west-01.cleardb.com:3306/heroku_52d3cb3ec89ab54?reconnect=true
+            jdbc:mysql://eu-cdbr-west-01.cleardb.com:3306/heroku_52d3cb3ec89ab54?sslmode=require
         </property>
         <property name="hibernate.connection.username">
             befbead58e6dfe

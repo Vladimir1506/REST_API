@@ -92,8 +92,7 @@
                             <fileset>
                                 <directory>target</directory>
                                 <excludes>
-                                    <exclude>*.war</exclude>
-                                    <exclude>dependency/*.jar</exclude>
+                                    <exclude>dependency</exclude>
                                 </excludes>
                             </fileset>
                         </filesets>

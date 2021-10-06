@@ -1,0 +1,4 @@
+0:0:0:0:0:0:0:1 - - [01/Sep/2021:19:01:35 +0300] "GET /addFile HTTP/1.1" 200 18 http-bio-8088-exec-2 51
+0:0:0:0:0:0:0:1 - - [01/Sep/2021:19:01:35 +0300] "GET /favicon.ico HTTP/1.1" 404 973 http-bio-8088-exec-3 0
+0:0:0:0:0:0:0:1 - - [01/Sep/2021:19:31:47 +0300] "GET /FileUploadDemo HTTP/1.1" 404 979 http-bio-8088-exec-5 0
+0:0:0:0:0:0:0:1 - - [01/Sep/2021:19:32:08 +0300] "GET /FileUploadDemo HTTP/1.1" 404 979 http-bio-8088-exec-7 5

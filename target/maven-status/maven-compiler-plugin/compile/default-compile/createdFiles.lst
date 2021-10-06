@@ -1,0 +1,13 @@
+com\vladimir1506\rest\repository\implementation\UserImpl.class
+com\vladimir1506\rest\controller\UserController.class
+com\vladimir1506\rest\repository\implementation\MyFileImpl.class
+com\vladimir1506\rest\model\User.class
+com\vladimir1506\rest\model\MyFile.class
+com\vladimir1506\rest\repository\FileRepository.class
+com\vladimir1506\rest\repository\UserRepository.class
+com\vladimir1506\rest\servlets\FileServlet.class
+com\vladimir1506\rest\controller\FileController.class
+com\vladimir1506\rest\servlets\filter\ResponseFilter.class
+com\vladimir1506\rest\servlets\UserServlet.class
+com\vladimir1506\rest\util\HibernateUtil.class
+com\vladimir1506\rest\repository\GenericRepository.class

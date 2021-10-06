@@ -92,7 +92,7 @@
                             <fileset>
                                 <directory>target</directory>
                                 <excludes>
-                                    <exclude>dependency</exclude>
+                                    <exclude>/dependency</exclude>
                                 </excludes>
                             </fileset>
                         </filesets>

@@ -82,11 +82,26 @@
                         <port>8080</port>
                     </configuration>
                 </plugin>
-
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-clean-plugin</artifactId>
+                    <version>3.0.0</version>
+                    <configuration>
+                        <excludeDefaultDirectories>true</excludeDefaultDirectories>
+                        <filesets>
+                            <fileset>
+                                <directory>target</directory>
+                                <excludes>
+                                    <exclude>*.war</exclude>
+                                    <exclude>dependency/*.jar</exclude>
+                                </excludes>
+                            </fileset>
+                        </filesets>
+                    </configuration>
+                </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-dependency-plugin</artifactId>
-                    <version>3.1.2</version>
                     <executions>
                         <execution>
                             <phase>package</phase>
@@ -96,7 +111,7 @@
                                     <artifactItem>
                                         <groupId>com.heroku</groupId>
                                         <artifactId>webapp-runner</artifactId>
-                                        <version>9.0.52.0</version>
+                                        <version>9.0.41.0</version>
                                         <destFileName>webapp-runner.jar</destFileName>
                                     </artifactItem>
                                 </artifactItems>

@@ -9,5 +9,6 @@ com\vladimir1506\rest\servlets\FileServlet.class
 com\vladimir1506\rest\controller\FileController.class
 com\vladimir1506\rest\servlets\filter\ResponseFilter.class
 com\vladimir1506\rest\servlets\UserServlet.class
+com\vladimir1506\rest\Start.class
 com\vladimir1506\rest\util\HibernateUtil.class
 com\vladimir1506\rest\repository\GenericRepository.class

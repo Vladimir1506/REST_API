@@ -21,7 +21,6 @@ import java.util.Date;
 import java.util.List;
 
 public class FileServlet extends HttpServlet {
-    private List<MyFile> allFiles;
 
     private FileController fileController;
     static final int fileMaxSize = 100 * 1024;
@@ -38,7 +37,7 @@ public class FileServlet extends HttpServlet {
         List<MyFile> files=new ArrayList<>();
         String filesJSON;
         String id = req.getHeader("user_id");
-        allFiles = fileController.getAllFiles();
+        List<MyFile> allFiles = fileController.getAllFiles();
 
         if (id != null) {
             Long userId = Long.parseLong(id);
